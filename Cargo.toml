@@ -1,0 +1,15 @@
+[package]
+name = "reprod-subxt-wasm-lightclient"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasm-bindgen-test = "0.3.50"
+tracing-wasm = "0.2.1"
+tracing = "0.1.34"
+console_error_panic_hook = "0.1.7"
+serde_json = { version = "1", features = ["raw_value"] }
+futures = "0.3"
+subxt-lightclient = { version = "0.38", default-features = false, features = ["web"] }
+subxt = { version = "0.38", default-features = false, features = ["web"] }
+getrandom = { version = "0.2", features = ["js"] }
