@@ -1,5 +1,3 @@
-### Re-produce of 
-
 ### How to run the code
 
 Terminal #1
