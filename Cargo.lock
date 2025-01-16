@@ -1698,7 +1698,6 @@ dependencies = [
  "getrandom",
  "serde_json",
  "subxt",
- "subxt-lightclient",
  "tracing",
  "tracing-wasm",
  "wasm-bindgen-test",
