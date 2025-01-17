@@ -7,7 +7,6 @@ $ ./target/release/substrate-node \
 --base-path /tmp/alice \
 --chain local \
 --alice \
---port 30333 \
 --listen-addr /ip4/0.0.0.0/tcp/30333/ws \
 --rpc-port 9944 \
 --node-key 0000000000000000000000000000000000000000000000000000000000000001 \
@@ -22,7 +21,6 @@ $ ./target/release/substrate-node \
 --base-path /tmp/bob \
 --chain local \
 --bob \
---port 30334 \
 --listen-addr /ip4/0.0.0.0/tcp/30334/ws \
 --rpc-port 9945 \
 --node-key 0000000000000000000000000000000000000000000000000000000000000002 \
