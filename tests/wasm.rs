@@ -1,9 +1,5 @@
 #![cfg(target_arch = "wasm32")]
 
-use futures::future::{BoxFuture, FutureExt, TryFutureExt};
-use futures::stream::{Stream, StreamExt, TryStreamExt};
-use serde_json::value::RawValue;
-use subxt::backend::rpc::{RawRpcFuture, RawRpcSubscription};
 use subxt::lightclient::{ChainConfig, LightClient};
 use subxt::{OnlineClient, PolkadotConfig};
 use wasm_bindgen_test::*;
@@ -11,7 +7,8 @@ use wasm_bindgen_test::*;
 async fn connect() -> OnlineClient<PolkadotConfig> {
     let config = ChainConfig::chain_spec(include_str!("../local.json"))
         .set_bootnodes([
-            "/ip4/127.0.0.1/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp",
+            "/ip4/127.0.0.1/tcp/9944/ws/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp",
+            "/ip4/127.0.0.1/tcp/9945/ws/p2p/12D3KooWHdiAxVd8uMQR1hGWXccidmfCwLqcMpGwR6QcTP6QRMuD",
         ])
         .unwrap();
     let (_client, rpc) = LightClient::relay_chain(config).unwrap();
@@ -44,7 +41,7 @@ async fn testing() {
     // --base-path /tmp/bob \
     // --chain local \
     // --bob \
-    // --port)) 30334 \
+    // --port 30334 \
     // --rpc-port 9945 \
     // --node-key 0000000000000000000000000000000000000000000000000000000000000002 \
     // --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
