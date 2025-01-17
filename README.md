@@ -8,7 +8,8 @@ $ ./target/release/substrate-node \
 --chain local \
 --alice \
 --port 30333 \
---rpc-port 9945 \
+--listen-addr /ip4/0.0.0.0/tcp/30333/ws \
+--rpc-port 9944 \
 --node-key 0000000000000000000000000000000000000000000000000000000000000001 \
 --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
 --validator
@@ -22,7 +23,8 @@ $ ./target/release/substrate-node \
 --chain local \
 --bob \
 --port 30334 \
---rpc-port 9944 \
+--listen-addr /ip4/0.0.0.0/tcp/30334/ws \
+--rpc-port 9945 \
 --node-key 0000000000000000000000000000000000000000000000000000000000000002 \
 --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
 --validator
